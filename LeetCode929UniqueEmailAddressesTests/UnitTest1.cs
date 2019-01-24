@@ -6,17 +6,17 @@ namespace LeetCode929UniqueEmailAddressesTests
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CheckUniqueEmailTest()
         {
             //arrange
             var email = "alice@leetcode.com";
 
             //act
             var solution = new Solution();
-            var actual = solution.NumUniqueEmail(email);
+            var actual = solution.CheckUniqueEmail(email);
 
             //assert
-            var expected = true;
+            var expected = "alice@leetcode.com";
             Assert.AreEqual(expected, actual);
         }
     }

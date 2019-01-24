@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace LeetCode929UniqueEmailAddressesTests
 {
@@ -7,10 +8,13 @@ namespace LeetCode929UniqueEmailAddressesTests
         public Solution()
         {
         }
-
-        public bool NumUniqueEmail(string email)
+        public string CheckUniqueEmail(string email)
         {
-            throw new NotImplementedException();
+            var patten = "^[a-zA-Zd]+@[a-zA-Zd]+.com$";
+
+            var match = Regex.Match(email, patten);
+
+            return match.Groups[0]?.Value ?? "";
         }
     }
 }
