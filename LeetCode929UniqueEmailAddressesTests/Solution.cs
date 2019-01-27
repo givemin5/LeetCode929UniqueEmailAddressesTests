@@ -8,17 +8,7 @@ namespace LeetCode929UniqueEmailAddressesTests
 {
     internal class Solution
     {
-        public Solution()
-        {
-        }
-        public bool IsUniqueEmail(string email)
-        {
-            return Regex.IsMatch(email, patten);
-        }
         private string patten = @"^([a-zA-Z\d.]+)(\+[+a-zA-Z\d.]+)?@([a-zA-Z\d.]+.com)$";
-
-
-
         public int NumUniqueEmails(string[] emails)
         {
             HashSet<string> seen = new HashSet<string>();
