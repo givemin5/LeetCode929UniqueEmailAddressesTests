@@ -24,17 +24,17 @@ namespace LeetCode929UniqueEmailAddressesTests
             HashSet<string> seen = new HashSet<string>();
             foreach (var email in emails)
             {
-                var s = CheckUniqueEmail(email);
-                if (!String.IsNullOrEmpty(s))
+                var uniqueEmail = GetUniqueEmail(email);
+                if (!String.IsNullOrEmpty(uniqueEmail))
                 {
-                    seen.Add(s);
-                }
+                    seen.Add(uniqueEmail);
+                };
             }
             return seen.Count;
         }
 
 
-        public string CheckUniqueEmail(string email)
+        public string GetUniqueEmail(string email)
         {
             var match = System.Text.RegularExpressions.Regex.Match(email, patten);
 
